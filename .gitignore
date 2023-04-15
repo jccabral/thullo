@@ -31,3 +31,9 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# prisma
+**/prisma/client/*
+
+# pnpm
+pnpm-lock.*
