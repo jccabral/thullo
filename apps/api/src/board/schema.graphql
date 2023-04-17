@@ -1,0 +1,27 @@
+type Board {
+  id: ID!
+  name: String!
+  cover: String
+  visibility: Visibility!
+  lists: [String]
+  # members: [User]
+}
+
+type Query {
+  boards: [Board]
+}
+
+type Mutation {
+  createBoard(board: CreateBoardInput!): Board
+}
+
+input CreateBoardInput {
+  name: String!
+  cover: String
+  visibility: Visibility
+}
+
+enum Visibility {
+  PUBLIC
+  PRIVATE
+}
