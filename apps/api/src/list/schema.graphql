@@ -1,0 +1,21 @@
+type List {
+  id: ID!
+  name: String!
+  order: Int
+  boardId: String!
+  cards: [String]
+}
+
+type Query {
+  lists: [List]
+}
+
+type Mutation {
+  createList(list: CreateListInput!): List
+}
+
+input CreateListInput {
+  name: String!
+  order: Int
+  boardId: String!
+}
