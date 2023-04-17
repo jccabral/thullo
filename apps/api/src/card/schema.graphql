@@ -1,0 +1,30 @@
+type Card {
+  id: ID!
+  title: String!
+  cover: String
+  labels: [String]
+  asignees: [String]
+  comments: [String]
+  attachments: [String]
+  order: Int
+  listId: String
+}
+
+type Query {
+  cards: [Card]
+}
+
+type Mutation {
+  createCard(card: CreateCardInput!): Card
+}
+
+input CreateCardInput {
+  title: String!
+  cover: String
+  labels: [String]
+  asignees: [String]
+  comments: [String]
+  attachments: [String]
+  order: Int
+  listId: String!
+}
